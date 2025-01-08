@@ -1,0 +1,55 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$username\
+$hostname\
+$kubernetes\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$docker_context\
+$golang\
+$helm\
+$nodejs\
+$python\
+$custom\
+$line_break\
+$jobs\
+$status\
+$character"""
+
+[username]
+format = '[$user]($style)@'
+
+[hostname]
+format = '[$hostname]($style) '
+
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style) '
+
+[kubernetes]
+format = '[$symbol$context( \($namespace\))]($style) '
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[docker_context]
+format = '[$symbol$context]($style) '
+
+[golang]
+format = '[$symbol($version )]($style) '
+
+[helm]
+format = '[$symbol($version )]($style) '
+
+[nodejs]
+format = '[$symbol($version )]($style) '
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style) '
+
+[status]
+format = '[$symbol $status]($style) '
+disabled = false
